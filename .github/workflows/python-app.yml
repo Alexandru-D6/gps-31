@@ -35,9 +35,3 @@ jobs:
         run: |
           coverage run -m test
           coverage report
-          
-      - name : Generate coverage report
-        id: generate-coverage-report
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
-        uses : ./
