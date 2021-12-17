@@ -36,6 +36,8 @@ jobs:
           coverage run -m test
           coverage report
           
-      - uses: romeovs/lcov-reporter-action@v0.2.16
-        with:
-          lcov-file: ./coverage/lcov.info
+      - name : Generate coverage report
+        id: generate-coverage-report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+        uses : ./
