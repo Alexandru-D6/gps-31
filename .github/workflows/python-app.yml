@@ -34,4 +34,4 @@ jobs:
       - name: test coverage
         run: |
           coverage run -m test
-          corerage report
+          coverage report
